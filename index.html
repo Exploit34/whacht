@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+	<link rel="stylesheet" href="css/estilos.css">
+	<title>WatchMovie</title>
+</head>
+<body>
+
+	
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<div class="container">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#" class="activo">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="js/series.html">Series</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="./js/peliculas.html">Películas</a>
+				</li>
+			</ul>
+
+			<a class="navbar-brand" href="#">WatchMovie</a>
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-desplegable" aria-controls="menu-desplegable" aria-expanded="false" aria-label="Menu de navegación">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="menu-desplegable">
+				<form class="form-inline ml-auto">
+					<input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Buscar">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+				</form>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Usuario
+						</a>
+						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Mi perfil</a>
+							<a class="dropdown-item" href="#">Configuración</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Cerrar sesión</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<main>
+		<div class="container">
+			<h3 class="titulo">Interestellar</h3>
+			<p class="descripcion">
+				Narra las aventuras de un grupo de exploradores que hacen uso de un agujero de gusano recientemente descubierto para superar las limitaciones de los viajes espaciales tripulados y vencer las inmensas distancias que tiene un viaje interestelar.
+			</p>
+			<button role="button" class="btn btn-primary"><i class="fas fa-play"></i>Reproducir</button>
+			<button role="button" class="btn btn-outline-primary"><i class="fas fa-info-circle"></i>Más información</button>
+		</div>	
+	</main>
+
+	<section class="peliculas">
+		<div class="container">
+		  <h3 class="titulo">Películas</h3>
+		  <div class="row">
+			<div class="col-md-4">
+			  <div class="pelicula">
+				<img src="./img/5.png" alt="Pelicula 1">
+				<p class="subtitulo">Subtítulo de la Película 1</p>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div class="pelicula">
+				<img src="./img/1.png" alt="Pelicula 2">
+				<p class="subtitulo">Subtítulo de la Película 2</p>
+			  </div>
+			</div>
+			<div class="col-md-4">
+			  <div class="pelicula">
+				<img src="./img/3.png" alt="Pelicula 3">
+				<p class="subtitulo">Subtítulo de la Película 3</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+	<footer class="footer">
+		<div class="container">
+			<p>© 2021 Netflix, Inc.</p>
+		</div>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* Estilos para el encabezado */
+.navbar {
+    margin-bottom: 30px;
+   
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin-right: 10px;
+ 
+  }
+  
+  /* Estilos para el contenido principal */
+  .titulo {
+    margin-top: 30px;
+  }
+  
+  .descripcion {
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    margin-right: 10px;
+  }
+  
+  /* Estilos para la sección de películas */
+  .peliculas {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .subtitulo {
+    margin-top: 10px;
+  }
+  
+  /* Estilos para el footer */
+  .footer {
+    background-color: #7f196c;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .footer p {
+    margin: 0;
+    text-align: center;
+  }
+  img{
+    width: 400px;
+    height: 300px;
+  }
