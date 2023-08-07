@@ -1,0 +1,116 @@
+/* Estilos generales para todos los dispositivos */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #59286E;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #ccc;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ccc;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+body {
+    margin-top: 70px;
+}
+
+button {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #0e0e0f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 767px) {
+    .container {
+        max-width: 90%;
+        border-radius: 10px;
+    }
+
+    h2 {
+        margin-left: 0;
+    }
+
+    .form-group {
+        margin-left: 0;
+    }
+
+    input {
+        padding: 8px;
+    }
+
+    button {
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+
+/* Estilos específicos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        max-width: 600px;
+        padding: 30px;
+    }
+
+    input {
+        padding: 8px;
+    }
+
+    button {
+        width: 60%;
+        margin-left: 20%;
+    }
+}
+
+/* Estilos específicos para pantallas más grandes */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 800px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        padding: 12px;
+    }
+
+    button {
+        width: 40%;
+        margin-left: 30%;
+    }
+}

@@ -1,54 +1,139 @@
+/* Estilos generales que aplican a todos los tamaños de pantalla */
 /* Estilos para el encabezado */
 .navbar {
-    margin-bottom: 30px;
-   
+  margin-bottom: 20px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  background-color: #313030;
+}
+
+/* Cambiar el fondo de la barra de navegación a un color personalizado */
+.custom-navbar {
+  background-color: #313030;
+}
+
+/* Estilos para el contenido principal */
+.titulo {
+  margin-top: 20px;
+  color: azure;
+}
+
+.descripcion {
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.btn {
+  margin-right: 10px;
+  background-color: #341740;
+  color: #fff;
+}
+
+/* Estilos para la sección de películas */
+.peliculas {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.subtitulo {
+  margin-top: 10px;
+}
+
+/* Estilos para el footer */
+.footer {
+  background-color: #341740;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.footer p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Estilos generales que aplican a todos los tamaños de pantalla */
+/* ... (otros estilos generales) ... */
+
+/* Media queries para dispositivos pequeños como teléfonos móviles */
+@media (max-width: 575px) {
+  .pr1 {
+    margin: 20px;
+    padding: 15px;
+    width: calc(100% - 30px);
   }
-  
-  .navbar-brand {
-    font-size: 1.5rem;
+
+  img {
+    width: 100%;
+    height: 40%;
   }
-  
-  .navbar-nav .nav-link {
-    font-size: 1.2rem;
-    margin-right: 10px;
- 
+
+  .peliculas .row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  
-  /* Estilos para el contenido principal */
-  .titulo {
-    margin-top: 30px;
+
+  .peliculas .col-md-4 {
+    flex: 0 0 auto;
+    margin: 0px;
+    max-width: 33.33%;
   }
-  
-  .descripcion {
-    margin-bottom: 30px;
+
+  .details-button{
+    display: flex;
+    border-radius: 10px;
+    padding: 3%;
+    background-color: black;
+    color: white;
   }
-  
-  .btn {
-    margin-right: 10px;
+
+  .d{
+    margin-bottom: 1rem;
   }
-  
-  /* Estilos para la sección de películas */
-  .peliculas {
-    margin-top: 40px;
-    margin-bottom: 30px;
+}
+
+/* Estilos para tablets en orientación vertical y dispositivos pequeños */
+@media (min-width: 576px) and (max-width: 767px) {
+  .pr1 {
+    margin: 30px;
+    padding: 20px;
+    width: calc(100% - 60px);
   }
-  
-  .subtitulo {
-    margin-top: 10px;
+}
+
+/* Estilos para tablets en orientación horizontal y laptops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .pr1 {
+    margin: 40px;
+    padding: 25px;
+    width: calc(100% - 80px);
   }
-  
-  /* Estilos para el footer */
-  .footer {
-    background-color: #7f196c;
-    color: #fff;
-    padding: 10px 0;
+}
+
+/* Estilos para dispositivos de escritorio */
+@media (min-width: 992px) {
+  .pr1 {
+    margin: 60px;
+    padding: 30px;
+    width: calc(100% - 120px);
   }
-  
-  .footer p {
-    margin: 0;
-    text-align: center;
-  }
-  img{
-    width: 400px;
-    height: 300px;
-  }
+}
+
+/* Estilos para el cuerpo en todos los tamaños de pantalla */
+body {
+  background-color: #59286E;
+}
+
+.pr1{
+background-color: #000;
+}
+

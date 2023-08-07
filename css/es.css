@@ -22,14 +22,14 @@ h1 {
 
 #detalles-pelicula {
     border: 1px solid #ccc;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #fff;
 }
 
 #detalles-pelicula h2 {
     font-size: 1.8rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: -1rem;
 }
 
 #detalles-pelicula img {

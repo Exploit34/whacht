@@ -68,7 +68,65 @@ document.addEventListener("DOMContentLoaded", function() {
             trailer: "https://www.youtube.com/embed/Mwe3b7J80Jw",
             trailer2:"https://www.youtube.com/embed/e2Xlgz6dblo",
         },
+        {
+            nombre: "honesty",
+            imagen: "../img/honesty.jpg",
+            descripcion: "Xu Yi Ren pierde tanto su relación como su carrera en una noche. Su íntima amiga, Xia Di la recomienda a una empresa de arquitectura como asistente del CEO. Sin embargo, durante la entrevista, descubre que el CEO es la persona que expuso que su novio la engaña en público, Fang Zhi You. Aunque no sabe por qué, Xu Yi Ren finalmente consigue el trabajo, pero se le encarga una tarea extraña: mentirle a su jefe. Pero la tendencia de Fang Zhi You a exponer sus mentiras en público siempre la lleva a situaciones difíciles.",
+            año: 2020,
+            trailer: "https://www.youtube.com/embed/bJj2XdYAGtE",
+            trailer2:"https://www.youtube.com/embed/rd2uFB13VJw",
+        },
+        {
+            nombre: "Fox and Miss",
+            imagen: "../img/fox.jpg",
+            descripcion: "Gao Zheng He es un hombre de acero que vive de la exploración de gemas de alta gama. Después de sobrevivir a un accidente que lo envió por un precipicio, Gao Zheng He se topa con una tribu primitiva dominada por mujeres. Su líder Xing Yue lo rescata con la intención de convertirlo en su hombre. Para obtener una gema rara de la tribu, Gao Zheng He pretende casarse con Xing Yue y se escapa en la primera oportunidad que tiene. Xing Yue se dirige sola a la gran ciudad para recuperar lo que es suyo.",
+            año: 2020,
+            trailer: "https://www.youtube.com/embed/bJj2XdYAGtE",
+            trailer2:"https://www.youtube.com/embed/rd2uFB13VJw",
+        },
+        {
+            nombre: "my destiny",
+            imagen: "../img/destiny.jpg",
+            descripcion: "Chen Jian Xin, una joven artista, y Wang Xi Yi, el heredero de un conglomerado, se conocen en un crucero. El inesperado encuentro termina en algo más. Las emociones que desprende su relación, los impulsan a casarse. Pero la vida de casados presenta grandes dificultades para una pareja que tiene muchas cosas por aprender sobre la vida y el matrimonio. Después de un aborto involuntario, los caminos de Chen Jian Xin y Wang Xi Yi se separan. ¿Estarán destinados a encontrarse nuevamente?",
+            año: 2020,
+            trailer: "https://www.youtube.com/embed/bJj2XdYAGtE",
+            trailer2:"https://www.youtube.com/embed/rd2uFB13VJw",
+        },
+        {
+            nombre: "Tiger and Rose",
+            imagen: "../img/romance.jpg",
+            descripcion: "¿Qué pasaría si pudieras transportarte al mundo de los dramas? Xiao Qian es una chica que desea convertirse en una gran guionista. Al intentar que su drama sea exitoso, la protagonista viaja accidentalmente a su propia historia. Pero en ésta, Xiao Qian asume el papel de un personaje secundario, con una mala reputación y una vida demasiado corta. Para cambiar su destino, Xiao Qian hará hasta lo imposible. ¿Podrá conseguirlo?",
+            año: 2018,
+            trailer: "https://www.youtube.com/embed/IKLpwmoAAeg",
+            trailer2:"https://www.youtube.com/embed/rd2uFB13VJw",
+        },
+        {
+            nombre: "My Girlfriend is an Alien",
+            imagen: "../img/girldfriend.jpg",
+            descripcion: "Chai Xiao Qi es una chica alienígena atrapada en el planeta Tierra. Ella intenta sobrevivir a su manera con ayuda de sus superpoderes. Un día, se encuentra con Fang Leng, un empresario con una extraña amnesia. Cuando llueve, él olvida a las mujeres que lo rodean. Entre ambos protagonistas, nacerá un amor intergaláctico que te sacará más de una risa.  ",
+            año: 2020,
+            trailer: "https://www.youtube.com/embed/IKLpwmoAAeg",
+            trailer2:"https://www.youtube.com/embed/rd2uFB13VJw",
+        },
+        {
+            nombre: "Put your head on my shoulder",
+            imagen: "../img/shoulder.jpg",
+            descripcion: "Put your head on my shoulder es uno de los C-dramas más populares en Youtube. Si Tu Mo es una joven universitaria con dudas sobre su futuro. Contabilidad no parece ser su profesión soñada, así que decide luchar por lo que más le apasiona: la publicidad. Su decisión la lleva a conocer a Gu Wei Yi, un estudiante de física, con quien compartirá el mismo techo. ",
+            año: 2019,
+            trailer: "https://www.youtube.com/embed/IKLpwmoAAeg",
+            trailer2:"https://www.youtube.com/embed/rd2uFB13VJw",
+        },
+        {
+            nombre: "The Love Equations",
+            imagen: "../img/love.jpg",
+            descripcion: "Zhou Xiao, una chica amante de las historias de detectives, y Zhao Fan Zhou, un estudiante forense, se conocen en la universidad. De su encuentro, florece el amor y una tierna relación. Pero, inesperadamente, Zhao Fan Zhou termina con ella. Después de un tiempo se vuelve a encontrar ¿qué pasará con ellos? ¿su amor seguirá vivo? ",
+            año: 2020,
+            trailer: "https://www.youtube.com/embed/IKLpwmoAAeg",
+            trailer2:"https://www.youtube.com/embed/rd2uFB13VJw",
+        },
     ];
+    
+
 
     // Buscamos la película seleccionada en el arreglo de películas
     const pelicula = peliculas.find((p) => p.nombre === peliculaSeleccionada);
@@ -90,7 +148,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 <button id="reproducir-trailer">Reproducir</button>
             </div>
         `;
-
+        
+      
           // Agregar evento clic al botón "Reproducir"
     const reproducirButton = document.getElementById("reproducir-trailer");
     reproducirButton.addEventListener("click", () => {
@@ -109,16 +168,74 @@ document.addEventListener("DOMContentLoaded", function() {
         } else {
             // Contenido HTML que queremos mostrar en la ventana emergente
             const contenidoHTML = `
-                <h2>Trailer de ${pelicula.nombre} capitulo 1</h2>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="${pelicula.trailer}" frameborder="0" allowfullscreen></iframe>
+            <style>
+            body {
+                background-color: #341740;
+                color: #ffffff;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+    
+            .video-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                padding: 20px;
+            }
+    
+            .video-container {
+                width: 100%;
+                max-width: 600px;
+                margin: 10px ;
+                height:250px;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 15px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                text-align: center;
+            }
+    
+            .video-container iframe {
+                width: 80%; /* Aumentado el ancho del video */
+                height: 80%; /* Aumentado la altura del video */
+                border: none;
+                
+            }
+    
+            .recommended-video {
+                margin-top: 30px;
+                text-align: center;
+            }
+    
+            h2 {
+                color: #fff;
+                text-align: center;
+                margin-bottom: 5px;
+                font-size: 1.5rem; /* Cambiado el tamaño del título */
+            }
+        </style>
+    <div class="video-section">
+        <div class="video-container">
+            <h2>Trailer de ${pelicula.nombre} capítulo 1</h2>
+            <div class="video-frame">
+                <iframe src="${pelicula.trailer}" allowfullscreen ></iframe>
+            </div>
+        </div>
+        <div class="recommended-video">
+            <h2>Recomendado: Trailer de ${pelicula.nombre} capítulo 2</h2>
+            <div class="video-container">
+                <div class="video-frame">
+                    <iframe src="${pelicula.trailer2}" allowfullscreen  ></iframe>
                 </div>
-                <h2>Trailer de ${pelicula.nombre} capitulo 2</h2>
-                <iframe width="560" height="315" src="${pelicula.trailer2}" frameborder="0" allowfullscreen></iframe>
-                </div>
-                <!-- Aquí puedes agregar más contenido HTML si lo deseas -->
-            `;
-
+            </div>
+        </div>
+    </div>
+  
+`;
+    
             // Cargar el contenido HTML en la ventana emergente
             ventanaNueva.document.write(contenidoHTML);
             ventanaNueva.document.close();
@@ -130,5 +247,28 @@ document.addEventListener("DOMContentLoaded", function() {
     detallesPelicula.innerHTML = "<p>Película no encontrada</p>";
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const searchForm = document.getElementById("search-form");
 
+        searchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById("search-input");
+            const searchTerm = searchInput.value.toLowerCase(); // Convertir a minúsculas para búsqueda insensible a mayúsculas
+
+            // Lógica de búsqueda
+            const resultados = peliculas.filter(pelicula => {
+                const tituloPelicula = pelicula.titulo.toLowerCase();
+                return tituloPelicula.includes(searchTerm);
+            });
+
+            // Mostrar los resultados en la consola (puedes ajustar esto según tu diseño)
+            console.log("Resultados de búsqueda: ", resultados);
+
+            // Aquí puedes mostrar los resultados en el sitio web, por ejemplo, creando elementos HTML dinámicamente
+            // y agregándolos a una sección de resultados.
+        });
+    });
 });
+
+
+

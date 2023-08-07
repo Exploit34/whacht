@@ -1,254 +1,240 @@
-/* Estilos comunes */
-
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .navbar-brand {
-    font-size: 32px;
-    font-weight: bold;
-    color: #fff;
-  }
-  
-  .navbar-toggler {
-    border: none;
-  }
-  
-  .form-inline {
-    margin-right: 20px;
-  }
-  
-  .form-control {
-    margin-right: 10px;
-  }
-  
-  .navbar-nav {
-    align-items: center;
-  }
-  
-  .dropdown-menu {
-    min-width: 150px;
-    padding: 0;
-  }
-  
-  .dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.navbar-brand {
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  margin-left: 65px;
+}
+
+.navbar-toggler {
+  border: none;
+  margin-left: 82px;
+}
+
+.form-inline {
+  margin-right: 20px;
+}
+
+.form-control {
+  margin-right: 10px;
+}
+
+.navbar-nav {
+  align-items: center;
+}
+
+.dropdown-menu {
+  min-width: 150px;
+  padding: 0;
+}
+
+.dropdown-item {
+  padding: 10px;
+}
+
+.dropdown-item:hover {
+  background-color: #f1f1f1;
+}
+
+.movie-title {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.movie-year {
+  font-style: italic;
+  margin-top: 5px;
+  display: block;
+}
+
+.details-button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.modal-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.modal-poster img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-description {
+  margin-bottom: 10px;
+}
+
+.modal-year {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.close-button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.movie-poster {
+  width: 600px;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 576px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
     padding: 10px;
   }
-  
-  .dropdown-item:hover {
-    background-color: #f1f1f1;
+
+  .navbar-brand {
+    font-size: 24px;
   }
-  
-  .movie-title {
-    font-weight: bold;
+
+  .form-control {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav {
     margin-top: 10px;
-    display: block;
   }
-  
+
+  .dropdown-menu {
+    position: static;
+    float: none;
+    width: 100%;
+  }
+
+  .dropdown-item {
+    padding: 5px;
+  }
+
+  .movie-poster {
+    margin-left: 10px;
+    width: 87px;
+    max-width: 87px;
+    height: 130px;
+    margin-bottom: -4px;
+  }
+
+  img{
+   height: 2000px;
+  }
+
+  .movie-title,
   .movie-year {
-    font-style: italic;
-    margin-top: 5px;
-    display: block;
+    font-size: 12px;
   }
-  
+
   .details-button {
-    margin-top: 10px;
     padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    font-size: 14px;
+    margin-top: 5px;
   }
-  
-  .modal-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+
+  .modal-title {
+    font-size: 24px;
   }
-  
-  .modal {
+
+  .modal-poster {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  img{
+    width: 100%;
+    height: 50px;
+  }
+
+  .container{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
+  }
+}
+
+/* Estilos para pantallas medianas */
+@media (min-width: 577px) and (max-width: 991px) {
+  .form-control {
+    width: 300px;
+  }img{
+    width: 400px;
+    height: 500px;
+  }
+  
+}
+
+/* Estilos para pantallas grandes */
+@media (min-width: 992px) {
+  .form-control {
+    width: 300px;
+  }
+  .movie-poster {
+    width: 278px;
+    height: 225px;
+    object-fit: cover;
+    border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
-  
-  .modal-title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .modal-poster img {
+  table {
     width: 100%;
-    height: auto;
-  }
-  
-  .modal-description {
-    margin-bottom: 10px;
-  }
-  
-  .modal-year {
-    font-style: italic;
-    margin-bottom: 10px;
-  }
-  
-  .close-button {
+    border-collapse: collapse;
     margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    background-color: #fff;
+  }img{
+    width: 400px;
+    height: 500px;
   }
-  
-  .movie-poster{
-    width: 600px;
-  }
-  /* Estilos para dispositivos móviles */
-  
-  @media (max-width: 576px) {
-  
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 10px;
-    }
-  
-    .navbar-brand {
-      font-size: 24px;
-    }
-  
-    .form-control {
-      width: 100%;
-      margin-right: 0;
-      margin-bottom: 10px;
-    }
-  
-    .navbar-nav {
-      margin-top: 10px;
-    }
-  
-    .dropdown-menu {
-      position: static;
-      float: none;
-      width: 100%;
-    }
-  
-    .dropdown-item {
-      padding: 5px;
-    }
-  
-    .movie-poster {
-      width: 100%;
-      max-width: 250px;
-      height: auto;
-      margin-bottom: 10px;
-      object-fit: cover;
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }
-  
-    .movie-title, .movie-year {
-      font-size: 14px;
-    }
-  
-    .details-button {
-      padding: 5px 10px;
-      font-size: 14px;
-      margin-top: 5px;
-    }
-  
-    .modal-title {
-      font-size: 24px;
-    }
-  
-    .modal-poster {
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  }
-  
-  /* Estilos para pantalla grande */
-  
-  @media (min-width: 577px) {
-  
-    .form-control {
-      width: 300px;
-    }
-  
-    .dropdown-menu {
-      min-width: 200px;
-    }
-  
-    .movie-poster {
-      width: 278px;
-      height: 225px;
-      object-fit: cover;
-      border-radius: 5px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    }
-  
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-  
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      text-align: left;
-    }
-  
-    th {
-      background-color: #f1f1f1;
-      font-weight: bold;
-    }
-  
-    .details-button {
-      margin: 0;
-      padding: 10px;
-      font-size: 18px;
-    }
-  
-    .modal-poster {
-      width: 300px;
-      margin-bottom: 20px;
-    }
-  
-    .modal-description {
-      font-size: 18px;
-    }
-  
-    .modal-year {
-      font-size: 16px;
-    }
-  
-    .close-button {
-      margin-top: 30px;
-      font-size: 18px;
-      padding: 10px 20px;
-    }
-  }
- 
+}
+
+
+.pr1{
+background-color: black;
+}

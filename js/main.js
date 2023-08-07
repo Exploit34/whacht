@@ -13,6 +13,7 @@ function getParameterByName(name) {
     return url.searchParams.get(name);
 }
 
+
 // Obtenemos todos los botones de "Ver detalles"
 const buttons = document.querySelectorAll(".details-button");
 
@@ -26,6 +27,20 @@ buttons.forEach((button) => {
         localStorage.setItem("peliculaSeleccionada", peliculaSeleccionada);
 
         // Redirigimos a la página de detalle
-        window.location.href = "./detalle.html";
+        window.location.href = "../views/detalle.html";
+    });
+
+peliculas.forEach((pelicula) => {
+        pelicula.addEventListener('mouseenter', (e) => {
+            const elemento = e.currentTarget;
+            setTimeout(() => {
+                peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
+                elemento.classList.add('hover');
+            }, 300);
+        });
+    });
+    
+fila.addEventListener('mouseleave', () => {
+        peliculas.forEach(pelicula => pelicula.classList.remove('hover'));
     });
 });

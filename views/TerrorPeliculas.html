@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="../css/peli.css">
+  </head>
+  <body>
+    <header>
+      
+      <nav class="navbar navbar-expand-md navbar-dark custom-navbar">
+        <div class="container">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Series</a>
+            </li>
+          </ul>
+          <a class="navbar-brand" href="#">WatchMovie</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-desplegable" aria-controls="menu-desplegable" aria-expanded="false" aria-label="Menu de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu-desplegable">
+              <form id="search-form" class="form-inline ml-auto">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Buscar películas" aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Categorias Peliculas
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Accion</a>
+                      <a class="dropdown-item" href="#">Drama</a>
+                      <a class="dropdown-item" href="#">Terror</a>
+                  </div>
+              </li>
+          </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Usuario
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">Mi perfil</a>
+                                <a class="dropdown-item" href="#">Configuración</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Cerrar sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+      <h1>Accion</h1>
+    </header>
+    
+    <main>
+      <table class="search-results">
+        <tr>
+          
+        </tr>
+        <tbody id="results-container"></tbody>
+    </table>
+      <table class="series-table">
+        <tr>
+        </tr>
+        <tr>
+            <td>
+                <img class="movie-poster" src="../img/el niño.jpg" alt="El niño"><br>
+                <span class="movie-title">El niño</span> - <span class="movie-year">2020</span>
+                <button class="details-button" data-pelicula="El niño">Ver detalles</button>
+              </td>
+              <td>
+                <img class="movie-poster" src="../img/profesion.jpg" alt="La posesion infernal"><br>
+                <span class="movie-title">La posesion infernal</span> - <span class="movie-year">2018</span>
+                <button class="details-button" data-pelicula="La posesion infernal">Ver detalles</button>
+              </td>
+              <td>
+                <img class="movie-poster" src="../img/4.png" alt="Miedo Pelicula 3"><br>
+                <span class="movie-title">Miedo Pelicula 3</span> - <span class="movie-year">2017</span>
+                <button class="details-button" data-pelicula="Miedo Pelicula 3">Ver detalles</button>
+              </td>
+              <td>
+                <img class="movie-poster" src="../img/6.png" alt="Miedo Pelicula 4"><br>
+                <span class="movie-title">Miedo Pelicula 4</span> - <span class="movie-year">2016</span>
+                <button class="details-button" data-pelicula="Miedo Pelicula 4">Ver detalles</button>
+              </td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+          <td>
+            <img class="movie-poster" src="../img/dama.jpg" alt="La dama de negro"><br>
+            <span class="movie-title">La dama de negro</span> - <span class="movie-year">2020</span>
+            <button class="details-button" data-pelicula="La dama de negro">Ver detalles</button>
+          </td>
+          <td>
+            <img class="movie-poster" src="../img/evangeline.jpg" alt="Evangeline"><br>
+            <span class="movie-title">Evangeline</span> - <span class="movie-year">2018</span>
+            <button class="details-button" data-pelicula="Evangeline">Ver detalles</button>
+          </td>
+          <td>
+            <img class="movie-poster" src="../img/alexia.jpg" alt="Alexia"><br>
+            <span class="movie-title">Alexia</span> - <span class="movie-year">2017</span>
+            <button class="details-button" data-pelicula="Alexia">Ver detalles</button>
+          </td>
+          <td>
+            <img class="movie-poster" src="../img/golpe.jpg" alt="Golpe en la pequeña China"><br>
+            <span class="movie-title">Golpe en la pequeña China</span> - <span class="movie-year">2016</span>
+            <button class="details-button" data-pelicula="Golpe en la pequeña China">Ver detalles</button>
+          </td>
+          <!-- Agrega más películas de Miedo aquí -->
+        </tr>
+      </table>
+    
+      <div class="modal-container">
+        <div class="modal">
+          <h2 class="modal-title"></h2>
+          <img class="modal-poster" src="" alt="">
+          <p class="modal-description"></p>
+          <p class="modal-year"></p>
+          <button class="close-button">Cerrar</button>
+        </div>0
+      </div>
+
+    </main>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
