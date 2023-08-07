@@ -241,25 +241,26 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
 document.addEventListener("DOMContentLoaded", function() {
-        const searchForm = document.getElementById("search-form");
-
+    const searchForm = document.getElementById("search-form");
+    const resultadosContainer = document.getElementById("resultados-container"); // Agrega un elemento con este ID en tu HTML
+    
         searchForm.addEventListener("submit", function(event) {
             event.preventDefault();
             const searchInput = document.getElementById("search-input");
-            const searchTerm = searchInput.value.toLowerCase(); // Convertir a minúsculas para búsqueda insensible a mayúsculas
-
-            // Lógica de búsqueda
-            const resultados = peliculas.filter(pelicula => {
-                const tituloPelicula = pelicula.titulo.toLowerCase();
-                return tituloPelicula.includes(searchTerm);
+            const searchTerm = searchInput.value.toLowerCase();
+    
+            // Limpiar resultados anteriores
+            resultadosContainer.innerHTML = '';
+    
+            // Filtrar y mostrar resultados
+            peliculas.forEach(pelicula => {
+                if (pelicula.titulo.toLowerCase().includes(searchTerm)) {
+                    const peliculaElement = document.createElement("div");
+                    peliculaElement.classList.add("pelicula"); // Agrega clases CSS según tu diseño
+                    peliculaElement.innerHTML = `<h3>${pelicula.titulo}</h3><p>Director: ${pelicula.director}</p>`; // Personaliza según tus datos
+                    resultadosContainer.appendChild(peliculaElement);
+                }
             });
-
-            // Mostrar los resultados en la consola (puedes ajustar esto según tu diseño)
-            console.log("Resultados de búsqueda: ", resultados);
-
-            // Aquí puedes mostrar los resultados en el sitio web, por ejemplo, creando elementos HTML dinámicamente
-            // y agregándolos a una sección de resultados.
         });
     });
-
 });
