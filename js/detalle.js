@@ -239,4 +239,27 @@ document.addEventListener("DOMContentLoaded", function() {
         const detallesPelicula = document.getElementById("detalles-pelicula");
         detallesPelicula.innerHTML = "<p>Película no encontrada</p>";
     }
+    
+document.addEventListener("DOMContentLoaded", function() {
+        const searchForm = document.getElementById("search-form");
+
+        searchForm.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const searchInput = document.getElementById("search-input");
+            const searchTerm = searchInput.value.toLowerCase(); // Convertir a minúsculas para búsqueda insensible a mayúsculas
+
+            // Lógica de búsqueda
+            const resultados = peliculas.filter(pelicula => {
+                const tituloPelicula = pelicula.titulo.toLowerCase();
+                return tituloPelicula.includes(searchTerm);
+            });
+
+            // Mostrar los resultados en la consola (puedes ajustar esto según tu diseño)
+            console.log("Resultados de búsqueda: ", resultados);
+
+            // Aquí puedes mostrar los resultados en el sitio web, por ejemplo, creando elementos HTML dinámicamente
+            // y agregándolos a una sección de resultados.
+        });
+    });
+
 });
