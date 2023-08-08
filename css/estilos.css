@@ -126,6 +126,12 @@
     padding: 30px;
     width: calc(100% - 120px);
   }
+  .peliculas .col-md-4 {
+    max-width: 400px;
+
+  }img{
+    width: 300px;
+  }
 }
 
 /* Estilos para el cuerpo en todos los tamaños de pantalla */
