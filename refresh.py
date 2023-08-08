@@ -11,7 +11,8 @@ print('''
 ''')
 
 url = input("pagina a refrescar: ")
-refrescar = 160
+# ejemplo 60 = 1min, 120 = 2min etc...
+refrescar = input("cada cuanto quiere que se actualize (segundos)")
 
 
 while True:
