@@ -11,7 +11,7 @@ def gitCommands():
             subprocess.run(["git", "commit", "-m", commit_message])
             subprocess.run(["git", "push", "-u", "origin", "main"])
             print("¡Los comandos de Git se ejecutaron exitosamente!")
-            print(f"Nombre del commit anterior {commit_message}")
+            print(f"Name file cambio: {name_file} commit anterior: {commit_message}")
         elif file == "n":
             subprocess.run(["git", "add", "."])
             commit_message = input("Introduce el mensaje del commit: ")
