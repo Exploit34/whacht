@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (pelicula.titulo.toLowerCase().includes(searchTerm)) {
                     const peliculaElement = document.createElement("div");
                     peliculaElement.classList.add("pelicula"); // Agrega clases CSS según tu diseño
-                    peliculaElement.innerHTML = `<h3>${pelicula.titulo}</h3><p>Director: ${pelicula.director}</p>`; // Personaliza según tus datos
+                    peliculaElement.innerHTML = `<h3>${pelicula.titulo}</h3><p>Director: ${pelicula.nombre}</p>`; // Personaliza según tus datos
                     resultadosContainer.appendChild(peliculaElement);
                 }
             });
