@@ -10,6 +10,6 @@
 
 ## script server refresh
 <h3>refresh.py</h3>
-<p>refresca el server de nuestra pagina para qeu el sitio se actulize</p>
+<p>refresca el server de nuestra pagina</p>
 
 
