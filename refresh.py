@@ -1,14 +1,31 @@
 import requests
 import time
+import sys
 
-url = 'https://github.com/Exploit34/Exploit34.github.io/'
-refresh_interval = 160
+print('''
+    #############################
+    #   *         *         *   #
+    #   *   ¡Paginas web    *   #
+    #   *         *         *   #
+    #############################
+''')
+
+url = input("pagina a refrescar: ")
+refrescar = 160
+
 
 while True:
-    response = requests.get(url)
-    if response.status_code == 200:
-        print(f"Contenido actualizado:\n{response.text}")
+    responde = requests.get(url)
+    if responde.status_code == 200:
+        print(f"Contenido actualizado:\n{responde.text}")
+        print(f"pagina actualizada se refrescara en {refrescar} segundos")
     else:
-        print(f"No se pudo obtener el contenido (Código de estado: {response.status_code})")
+        print(f"No se pudo obtener el contenido (Código de estado: {responde.status_code})")
+        print("no se actulizo la pagina")
+        res = input("salir S o N").lower()
+        if res == "s":
+            sys.exit()
+        elif res == "n":
+            print(f"la pagina se refrescara en {refrescar}")
     
-    time.sleep(refresh_interval)
+    time.sleep(refrescar)
